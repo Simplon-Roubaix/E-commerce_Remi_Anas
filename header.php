@@ -23,14 +23,14 @@
     </head>
     <body>
 
-      <header class="container">
+      <header class="container" id="header">
         <div class="row">
-          <figure>
-            <img src="img/header.jpg" alt="vendeur d'organe">
+          <!-- <figure class="headerImg col-4">
+            <img src="img/header.jpg" alt="Famille heureuse">
+          </figure> -->
+          <h1 class="col-6">Paye Ton Gosse</h1>
+          <figure class="logoImg col-4">
+            <img src="img/logo.png" alt="logo">
           </figure>
-          <h1>NOM DU SITE</h1>
         </div>
-        <figure>
-          <img src="img/logo.png" alt="">
-        </figure>
       </header>
