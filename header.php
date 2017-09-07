@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Paye ton gosse</title>
+        <title>Le Plaisir d'Adopter</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,7 +28,7 @@
           <!-- <figure class="headerImg col-4">
             <img src="img/header.jpg" alt="Famille heureuse">
           </figure> -->
-          <h1 class="col-6">Paye Ton Gosse</h1>
+          <h1 class="col-6">Le Plaisir d'Adopter</h1>
           <figure class="logoImg col-4">
             <img src="img/logo.png" alt="logo">
           </figure>
