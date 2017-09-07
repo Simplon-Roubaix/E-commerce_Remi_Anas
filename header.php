@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Paye ton gosse</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,7 +23,7 @@
     </head>
     <body>
 
-      <header class="container" id="header">
+      <header class="container-fluid" id="header">
         <div class="row">
           <!-- <figure class="headerImg col-4">
             <img src="img/header.jpg" alt="Famille heureuse">
