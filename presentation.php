@@ -11,43 +11,33 @@
   <section class="prods">
     <?php
       include ("prods.php");
-      for ($i=0; $i <6 ; $i++) {
-        echo '
-        <div class="child col-5">
-
-        ';
-        foreach ($prods[$i] as $key => $value) {
-
-          if ($key=='img') {
+        foreach ($prods as $key => $value) {
             echo '
-              <figure class="childImg">
-                <img src="'. $value .'" alt="">
-              </figure>
-              <ul class="description">
-            ';
-            $key='Description';
-            $value='';
+              <div class="col-sm-5 col-md-5 col-lg-5 mt-5">
+                   <div class="card card-inverse card-info">
+                       <img class="card-img-top" src="img/enfant.jpg">
+                       <div class="card-block">
+                         <div class="card-text">
 
-          }
-          echo '
-            <li><strong>'. $key .'</strong>: <span>' . $value . '</span></li>
-          ';
-        }
+                           <h4 class="card-title">' . $value['Prenom'] . ' ' . $value['Nom'] . ' </h4>
+                           <ul>
+                             <li>'. $value['Pays'] .'</li>
+                             <li>'. $value['Age'] .'ans</li>
+                             <li>'. $value['Description'] .'</li>
+                           </ul>
 
-        echo '
-          </ul>
-           <form action="description.php" method="post">
-             <input type="hidden" name="Nenfant" value="'.$i.'">
-             <input type="submit" value="Voir l\'enfant">
-           </form>
-
-        </div>
-
+                         </div>
+                       </div>
+                       <form action="description.php" method="post">
+                          <input type="hidden" name="child" value="'.$key.'">
+                          <input type="submit" value="Voir enfant">
+                       </form>
+                   </div>
+               </div>
         ';
       }
+      // }
      ?>
-
-
 
 
 
