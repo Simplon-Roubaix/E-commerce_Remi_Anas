@@ -24,5 +24,13 @@
     <body>
 
       <header class="container">
-
+        <div class="row">
+          <figure>
+            <img src="img/header.jpg" alt="vendeur d'organe">
+          </figure>
+          <h1>NOM DU SITE</h1>
+        </div>
+        <figure>
+          <img src="img/logo.png" alt="">
+        </figure>
       </header>
