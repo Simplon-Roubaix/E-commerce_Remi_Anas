@@ -7,21 +7,72 @@ img{
   height: 100% !important;
 }
 figure{
-  margin: 0 !important;
+  margin: 0;
 }
 body{
+  background-color: #475F83;
   #header{
     background-color: #B7C9F1;
+    background-image: url('../img/bgHeader.jpg');
+    background-size: cover;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px -5px 8px 0px grey inset;
+    box-shadow: 0px -5px 8px 0px black inset;
+    h1{
+      color: white;
+      text-shadow: 0px 0px 5px black;
+      font-size: 10vw;
+      font-family: 'Berkshire Swash', cursive;
+    }
+    .logoImg{
+      max-width: 180px;
+      max-height: 150px;
+    }
   }
   #main{
+    padding-top: 50px;
+    .intro{
+      .card{
+        padding: 10px;
+        background-color:#F1F2F390 ;
+        h2{
+          font-size: 38px;
+        }
+      }
+    }
     .prods{
       display: flex;
       flex-wrap: wrap;
-      .child{
-
+      .card-info{
+        background-color: #F1F2F3;
+        .card-img-top{
+          max-width: 450px !important;
+          max-height: 270px;
+        }
+        .card-block{
+          padding-bottom: 0;
+          .card-text{
+            color: black;
+            h4{
+              color: black;
+            }
+            ul{
+              list-style: none;
+            }
+          }
+        }
+        hr{
+          margin: 0;
+        }
+        form{
+          background-color: #ECF0F1 ;
+          .btn{
+            // background-color: #fff;
+            color: black;
+            font-weight: bold;
+            margin: 5px;
+          }
+        }
       }
     }
   }
