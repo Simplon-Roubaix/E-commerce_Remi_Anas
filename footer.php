@@ -1,4 +1,22 @@
 
+      <script type="text/javascript">
+
+        $('#header input').click(function(){
+          window.scrollTo(0, 500);
+        });
+
+
+        $(".viewChild").hide();
+        $(".colorBack").mouseover(function(){
+          $(this).find(".viewChild").show();
+        })
+
+        $(".colorBack").mouseout(function(){
+          $(this).find(".viewChild").hide();
+        })
+      </script>
+
+
       <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
       <script src="js/plugins.js"></script>
       <script src="js/main.js"></script>

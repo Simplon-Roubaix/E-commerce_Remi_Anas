@@ -8,7 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
           <!-- Font family -->
-        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Satisfy" rel="stylesheet">
 
 
 	      <link rel="icon" href="img/logo.png">
@@ -27,13 +28,7 @@
     </head>
     <body>
 
-      <header class="container-fluid " id="header">
-        <div class="row d-flex justify-content-between">
-
-          <h1 class="col-6">Le Plaisir d'Adopter</h1>
-
-          <figure class="logoImg col-4 align-self-end">
-            <img class="push-right" src="img/logo.png" alt="logo">
-          </figure>
-        </div>
+      <header class="" id="header">
+            <h1 class="">Le Plaisir <br>d'Adopter</h1>
+            <input class="js-scrollTo" type="button" onclick="scrollDown()" value="Prendre un Coeur >">
       </header>

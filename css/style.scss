@@ -10,31 +10,42 @@ figure{
   margin: 0;
 }
 body{
-  background-color: #475F83;
+  background-image: url('../img/bgHeader.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   #header{
-    background-color: #B7C9F1;
-    background-image: url('../img/bgHeader.jpg');
-    background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0px -5px 8px 0px black inset;
+    height: 100vh;
     h1{
+      margin: auto;
+      text-align: center;
+      font-weight: bold;
       color: white;
-      text-shadow: 0px 0px 5px black;
-      font-size: 10vw;
-      font-family: 'Berkshire Swash', cursive;
+      text-shadow: 0px 0px 90px black;
+      font-size: 12vw;
+      font-family: 'Satisfy', cursive;
     }
-    .logoImg{
-      max-width: 180px;
-      max-height: 150px;
+    input{
+      padding: 10px;
+      border: none;
+      margin: auto;
+      position: relative;
+      margin-bottom: 50px;
+      background-color: #27AE61;
+      color: white;
+      transition: 0.2s;
+      &:hover{
+        background-color: #006B14;
+      }
     }
   }
   #main{
-    padding-top: 50px;
     .intro{
       .card{
         padding: 10px;
-        background-color:#F1F2F390 ;
+        background-color: #F1F2F3 ;
         h2{
           font-size: 38px;
         }
@@ -43,34 +54,45 @@ body{
     .prods{
       display: flex;
       flex-wrap: wrap;
-      .card-info{
-        background-color: #F1F2F3;
-        .card-img-top{
-          max-width: 450px !important;
-          max-height: 270px;
-        }
-        .card-block{
-          padding-bottom: 0;
-          .card-text{
-            color: black;
-            h4{
-              color: black;
-            }
-            ul{
-              list-style: none;
-            }
+      padding: 0;
+      .childCard{
+        z-index: 3;
+        margin-top: 0 !important;
+        padding: 0;
+        .colorBack{
+          height: 270px;
+          text-shadow: 0 0 40px black;
+          font-weight: bold;
+          transition: 0.2s;
+          &:hover{
+            background-color: transparent !important;
           }
-        }
-        hr{
-          margin: 0;
-        }
-        form{
-          background-color: #ECF0F1 ;
-          .btn{
-            // background-color: #fff;
-            color: black;
-            font-weight: bold;
-            margin: 5px;
+          &:hover p,&:hover .card-title{
+            color: transparent !important;
+          }
+          .card-title{
+            color: white;
+            padding: 30px 20px;
+          }
+          p{
+            color: white;
+            width: 60%;
+            padding-left: 20%;
+          }
+          form{
+            display: flex;
+            .viewChild{
+              padding: 10px;
+              border: none;
+              margin: auto;
+              position: relative;
+              background-color: #efd334;
+              color: white;
+              transition: 0.2s;
+              &:hover{
+                background-color: #827218;
+              }
+            }
           }
         }
       }
