@@ -9,18 +9,94 @@ img {
 }
 
 figure {
-  margin: 0 !important;
+  margin: 0;
 }
 
+body {
+  background-image: url("../img/bgHeader.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
 body #header {
-  background-color: #B7C9F1;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0px -5px 8px 0px grey inset;
+  height: 100vh;
+}
+body #header h1 {
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 0px 90px black;
+  font-size: 12vw;
+  font-family: 'Satisfy', cursive;
+}
+body #header input {
+  padding: 10px;
+  border: none;
+  margin: auto;
+  position: relative;
+  margin-bottom: 50px;
+  background-color: #27AE61;
+  color: white;
+  transition: 0.2s;
+}
+body #header input:hover {
+  background-color: #006B14;
+}
+body #main .intro .card {
+  padding: 10px;
+  background-color: #F1F2F3;
+}
+body #main .intro .card h2 {
+  font-size: 38px;
 }
 body #main .prods {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+}
+body #main .prods .childCard {
+  z-index: 3;
+  margin-top: 0 !important;
+  padding: 0;
+}
+body #main .prods .childCard .colorBack {
+  height: 270px;
+  text-shadow: 0 0 40px black;
+  font-weight: bold;
+  transition: 0.2s;
+}
+body #main .prods .childCard .colorBack:hover {
+  background-color: transparent !important;
+}
+body #main .prods .childCard .colorBack:hover p, body #main .prods .childCard .colorBack:hover .card-title {
+  color: transparent !important;
+}
+body #main .prods .childCard .colorBack .card-title {
+  color: white;
+  padding: 30px 20px;
+}
+body #main .prods .childCard .colorBack p {
+  color: white;
+  width: 60%;
+  padding-left: 20%;
+}
+body #main .prods .childCard .colorBack form {
+  display: flex;
+}
+body #main .prods .childCard .colorBack form .viewChild {
+  padding: 10px;
+  border: none;
+  margin: auto;
+  position: relative;
+  background-color: #efd334;
+  color: white;
+  transition: 0.2s;
+}
+body #main .prods .childCard .colorBack form .viewChild:hover {
+  background-color: #827218;
 }
 
 /*# sourceMappingURL=style.css.map */

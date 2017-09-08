@@ -1,45 +1,32 @@
-<main class="container" id="main">
-  <section class="intro row">
-    <div class="">
-      <h2>Introduction</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut turpis quis ipsum consequat sollicitudin at vitae ligula. Nullam gravida metus eget urna vulputate pellentesque. Suspendisse aliquet justo eget nulla porta scelerisque. Curabitur vestibulum.<br><br>Ut consequat massa lacus, luctus eleifend ipsum suscipit nec. Cras metus tellus, vehicula facilisis leo et, convallis eleifend orci. Curabitur tristique urna sed velit finibus varius. Suspendisse pharetra eu dui quis feugiat. Donec finibus lacus blandit mauris feugiat dignissim.</p>
-    </div>
+<main class="" id="main">
+  <section class=" prods col-sm-12 col-md-12 col-lg-12 mt-12">
+    <?php
+    include ("prods.php");
+    foreach ($prods as $key => $value) {
+
+      ?>
+
+      <div style="background-image:url('img/enfant<?php echo $key?>')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
+        <div class="colorBack" style='background-color:<?php echo $colorBack[$key]?>'>
+          <h4 class="card-title"><?php echo $value['Prenom'] . ' ' . $value['Nom']?></h4>
+          <p><?php echo $value['Pays'] ?> <?php echo $value['Age'] ?> ans  <?php echo $value['Description'] ?></p>
+          <form class="" action="description.php" method="post">
+            <input type="hidden" name="enfant" value="<?php echo $key ?>">
+            <input class="viewChild" type="submit" value="Voir l'enfant">
+          </form>
+        </div>
+      </div>
+
+      <?php
+    };
+    ?>
+
   </section>
 
-  <hr>
-
-  <section class="prods">
-    <?php
-      include ("prods.php");
-        foreach ($prods as $key => $value) {
-            echo '
-              <div class="col-sm-5 col-md-5 col-lg-5 mt-5">
-                   <div class="card card-inverse card-info">
-                       <img class="card-img-top" src="img/enfant.jpg">
-                       <div class="card-block">
-                         <div class="card-text">
-
-                           <h4 class="card-title">' . $value['Prenom'] . ' ' . $value['Nom'] . ' </h4>
-                           <ul>
-                             <li>'. $value['Pays'] .'</li>
-                             <li>'. $value['Age'] .'ans</li>
-                             <li>'. $value['Description'] .'</li>
-                           </ul>
-
-                         </div>
-                       </div>
-                       <form action="description.php" method="post">
-                          <input type="hidden" name="child" value="'.$key.'">
-                          <input type="submit" value="Voir enfant">
-                       </form>
-                   </div>
-               </div>
-        ';
-      }
-      // }
-     ?>
-
-
-
+  <section class="intro ">
+    <div class="card">
+      <h2>Problème de fertilité ?</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<strong> Vestibulum </strong>ut turpis quis ipsum consequat sollicitudin at vitae ligula. Nullam gravida metus <strong>eget urna vulputate</strong> pellentesque. Suspendisse aliquet justo eget nulla porta scelerisque. Curabitur vestibulum.<br><hr><br>Ut consequat massa lacus, luctus eleifend ipsum suscipit nec. Cras metustellus, vehicula facilisis leo et, convallis eleifend orci. Curabitur tristique urna sed velit finibus varius. Suspendisse pharetra eu dui quis feugiat. Donec finibus lacus blandit mauris feugiat dignissim.</p>
+    </div>
   </section>
 </main>

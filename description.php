@@ -1,1 +1,1 @@
-<?php echo $_POST['child'] ?>
+<?php echo $_POST['enfant'] ?>
