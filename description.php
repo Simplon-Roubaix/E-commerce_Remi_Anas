@@ -7,7 +7,7 @@
 
 
   ?>
-  <main class="MainEnfant">
+  <main class="MainEnfant card">
     <div class="row description" >
 
       <!-- description -->
@@ -26,31 +26,47 @@
 
         <ul>
           <li>Nationalité: <?php Echo $prods[$enfant]['Pays'];
-
           ?></li>
           <li>Petit don de cet enfnant: <?php Echo $prods[$enfant]['Description'];
+          ?>
+        </li>
+        <li>
+          Infos supplémentaires: <?php Echo $prods[$enfant]['Infos supplementaire'];
+          ?>
+        </li>
+        <li>
+          Modalités de garantie: <?php Echo $prods[$enfant]['Garantie'];
+          ?>
+        </li>
+        <li>
+          Conseil d'éducation: <?php Echo $prods[$enfant]['Conseil d\'éducation'];
+          ?>
+        </li>
+        <li>
+          Réference produit: <?php Echo $prods[$enfant]['Reference produit'];
+          ?>
+        </li>
 
-          ?></li>
 
-        </ul>
-      </div>
-      
+      </ul>
+    </div>
 
 
-      <!-- Photo de l'enfance -->
 
-      <div class="col-sm-12 col-md-6 col-lg-6">
+    <!-- Photo de l'enfance -->
 
-        <img src=" <?php Echo $prods[$enfant]['img']; ?>  " alt="">
+    <div class="col-sm-12 col-md-6 col-lg-6">
 
-      </div>
+      <img src=" <?php Echo $prods[$enfant]['img']; ?>  " alt="">
 
     </div>
-  </main>
+
+  </div>
+</main>
 
 
-  <?php
-  include ("footer.php");
-  ?>
+<?php
+include ("footer.php");
+?>
 
 </body>

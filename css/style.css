@@ -297,8 +297,8 @@ body #main .prods .childCard .colorBack form .viewChild:hover {
 
 
 
-Remi said "Anass you have to use the 300 lines for css"
+/*Remi said "Anass you have to use the 300 lines for css"*/
 
-MainEnfant {
-  background-color: blue;
+.MainEnfant {
+  background-color: blue !important;
 }
