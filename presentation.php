@@ -6,7 +6,7 @@
 
       ?>
 
-      <div style="background-image:url('img/enfant<?php echo $key?>')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
+      <div style="background-image:url('<?php echo $value['img']?>')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
         <div class="colorBack" style='background-color:<?php echo $colorBack[$key]?>'>
           <h4 class="card-title"><?php echo $value['Prenom'] . ' ' . $value['Nom']?></h4>
           <p><?php echo $value['Pays'] ?> <?php echo $value['Age'] ?> ans  <?php echo $value['Description'] ?></p>
