@@ -1,6 +1,6 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-      <footer class="mt-5">
-        <div class="container-fluid bg-faded mt-5">
+      <footer class="">
+        <div class="container-fluid bg-faded footerUp">
           <div class="container">
             <div class="row py-3">
               <!-- footer column 1 start -->
@@ -90,7 +90,7 @@
           <div class="container">
             <div class="row py-3">
               <div class="col-md-9">
-                <p class="text-white">Lorem ipsum.</p>
+                <p class="text-white">Echange possible sous reserve des conditions du contrat d'adoption.</p>
               </div>
               <div class="col-md-3">
                 <div class="d-inline-block">
