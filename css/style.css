@@ -45,9 +45,22 @@ body #header input {
 body #header input:hover {
   background-color: #006B14;
 }
-body #main .intro .card {
-  padding: 10px;
-  background-color: #F1F2F3;
+
+body #main .intro {
+  width: 100%;
+  margin: 0;
+  padding: 50px 10px ;
+  background-color: #F1F2F399;
+}
+body #main .intro img{
+  height: auto!important;
+}
+body #main .intro img{
+  border-radius: 2px;
+}
+body #main .intro div{
+padding: 50px 20px;
+margin: 0 !important;
 }
 body #main .intro .card h2 {
   font-size: 38px;
@@ -103,8 +116,12 @@ body #main .prods .childCard .colorBack form .viewChild:hover {
 
 
 /*footer*/
+.footerUp{
+  background-color: rgba(255, 255, 255,0.8) !important;
+
+}
 .bg-primary {
- background-color: #000 !important;
+ background-color: rgba(0, 0, 0,0.8) !important;
 }
 
 .bg-circle
