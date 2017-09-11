@@ -23,10 +23,17 @@
 
   </section>
 
-  <section class="intro ">
-    <div class="card">
+  <section class="intro row ">
+    <div class="col-sm-12 col-md-12 col-lg-7 mt-7">
       <h2>Problème de fertilité ?</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<strong> Vestibulum </strong>ut turpis quis ipsum consequat sollicitudin at vitae ligula. Nullam gravida metus <strong>eget urna vulputate</strong> pellentesque. Suspendisse aliquet justo eget nulla porta scelerisque. Curabitur vestibulum.<br><hr><br>Ut consequat massa lacus, luctus eleifend ipsum suscipit nec. Cras metustellus, vehicula facilisis leo et, convallis eleifend orci. Curabitur tristique urna sed velit finibus varius. Suspendisse pharetra eu dui quis feugiat. Donec finibus lacus blandit mauris feugiat dignissim.</p>
+    </div>
+    <div class="row col-sm-12 col-md-12 col-lg-5 mt-5">
+      <figure class="dr float-left col-sm-5 col-md-5 col-lg-5">
+        <img src="http://img8.irna.ir/1396/13960619/82659762/n82659762-71859316.jpg" alt="">
+      </figure>
+      <h2 class="">Dr.Dre</h2>
+      <p class="">Suspendisse aliquet justo eget nulla porta scelerisque. Curabitur vestibulum.Ut consequat massa lacus, luctus eleifend ipsum suscipit nec. Cras metustellus, vehicula facilisis leo et.<br> Convallis eleifend orci. Curabitur tristique urna sed velit finibus varius. Suspendisse pharetra eu dui quis feugiat. Donec finibus lacus blandit</p>
     </div>
   </section>
 </main>
