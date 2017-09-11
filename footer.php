@@ -14,7 +14,7 @@
                   </div>
                   <div class="col-sm-9">
                     <h4>Tweets</h4>
-                    Embed here?
+                    Retweet
                   </div>
                 </div>
                 <!-- row end -->
@@ -30,21 +30,21 @@
                     </a>
                   </div>
                   <div class="col-sm-9">
-                    <h4>Contact us</h4>
-                    <p>Why not?</p>
+                    <h4>Contactez nous</h4>
+                    <p>Pourquoi pas?</p>
                   </div>
                 </div>
                 <!-- row end -->
                 <!-- row start -->
                 <div class="row py-2">
                   <div class="col-sm-3 hidden-md-down">
-                    <a class="bg-circle bg-info" href="#">
+                    <a class="bg-circle bg-info" href="http://orteil.dashnet.org/cookieclicker/">
                       <i class="fa fa-2x fa-fw fa-laptop" aria-hidden="true "></i>
                     </a>
                   </div>
                   <div class="col-sm-9">
-                    <h4>Cookie policy</h4>
-                    <p class=" ">We use <a class=" " href="/# ">cookies </a></p>
+                    <h4>Cookie </h4>
+                    <p class=" ">Nous aimons les <a href="http://orteil.dashnet.org/cookieclicker/">cookies </a></p>
                   </div>
                 </div>
                 <!-- row end -->
@@ -60,8 +60,8 @@
                     </a>
                   </div>
                   <div class="col-sm-9">
-                    <h4>Download pdf</h4>
-                    <p> You like print?</a></p>
+                    <h4>Telecharger le listing</h4>
+                    <p> En couleur</a></p>
 
                   </div>
                 </div>
@@ -74,8 +74,8 @@
                     </a>
                   </div>
                   <div class="col-sm-9">
-                    <h4>Info</h4>
-                    About us.
+                    <h4>Infos</h4>
+                    A propos de nous.
                   </div>
                 </div>
                 <!-- row ended -->
