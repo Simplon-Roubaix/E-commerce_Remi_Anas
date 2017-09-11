@@ -38,13 +38,13 @@
                 <!-- row start -->
                 <div class="row py-2">
                   <div class="col-sm-3 hidden-md-down">
-                    <a class="bg-circle bg-info" href="#">
+                    <a class="bg-circle bg-info" href="http://orteil.dashnet.org/cookieclicker/">
                       <i class="fa fa-2x fa-fw fa-laptop" aria-hidden="true "></i>
                     </a>
                   </div>
                   <div class="col-sm-9">
                     <h4>Cookie </h4>
-                    <p class=" ">Nous aimons les <a class=" " href="/# ">cookies </a></p>
+                    <p class=" ">Nous aimons les <a href="http://orteil.dashnet.org/cookieclicker/">cookies </a></p>
                   </div>
                 </div>
                 <!-- row end -->
