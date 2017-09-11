@@ -16,6 +16,7 @@
     ['img'=>'img/enfant6.jpg','Nom'=>'Benichou','Prenom'=>'Didier','Age'=>'14','Pays'=>'Corée','Description'=>'Cuisine déja très bien'],
 
     ['img'=>'img/enfant7.jpg','Nom'=>'Canette','Prenom'=>'Julie','Age'=>'6','Pays'=>'Pérou','Description'=>'Aime bien manger']
+
   ];
 
 
