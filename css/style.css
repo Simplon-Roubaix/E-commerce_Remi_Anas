@@ -47,6 +47,8 @@ body #header input:hover {
 }
 
 body #main .intro {
+  width: 100%;
+  margin: 0;
   padding: 50px 10px ;
   background-color: #F1F2F399;
 }
