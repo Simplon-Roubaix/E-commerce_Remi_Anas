@@ -14,7 +14,7 @@
                   </div>
                   <div class="col-sm-9">
                     <h4>Tweets</h4>
-                    Embed here?
+                    Retweet
                   </div>
                 </div>
                 <!-- row end -->
@@ -30,8 +30,8 @@
                     </a>
                   </div>
                   <div class="col-sm-9">
-                    <h4>Contact us</h4>
-                    <p>Why not?</p>
+                    <h4>Contactez nous</h4>
+                    <p>Pourquoi pas?</p>
                   </div>
                 </div>
                 <!-- row end -->
@@ -43,8 +43,8 @@
                     </a>
                   </div>
                   <div class="col-sm-9">
-                    <h4>Cookie policy</h4>
-                    <p class=" ">We use <a class=" " href="/# ">cookies </a></p>
+                    <h4>Cookie </h4>
+                    <p class=" ">Nous aimons les <a class=" " href="/# ">cookies </a></p>
                   </div>
                 </div>
                 <!-- row end -->
@@ -60,8 +60,8 @@
                     </a>
                   </div>
                   <div class="col-sm-9">
-                    <h4>Download pdf</h4>
-                    <p> You like print?</a></p>
+                    <h4>Telecharger le listing</h4>
+                    <p> En couleur</a></p>
 
                   </div>
                 </div>
@@ -74,8 +74,8 @@
                     </a>
                   </div>
                   <div class="col-sm-9">
-                    <h4>Info</h4>
-                    About us.
+                    <h4>Infos</h4>
+                    A propos de nous.
                   </div>
                 </div>
                 <!-- row ended -->

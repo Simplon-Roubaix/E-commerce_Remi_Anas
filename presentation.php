@@ -30,7 +30,7 @@
     </div>
     <div class="row col-sm-12 col-md-12 col-lg-5 mt-5">
       <figure class="dr float-left col-sm-5 col-md-5 col-lg-5">
-        <img src="http://img8.irna.ir/1396/13960619/82659762/n82659762-71859316.jpg" alt="">
+        <img src="img/dr.jpg" alt="">
       </figure>
       <h2 class="">Dr.Dre</h2>
       <p class="">Suspendisse aliquet justo eget nulla porta scelerisque. Curabitur vestibulum.Ut consequat massa lacus, luctus eleifend ipsum suscipit nec. Cras metustellus, vehicula facilisis leo et.<br> Convallis eleifend orci. Curabitur tristique urna sed velit finibus varius. Suspendisse pharetra eu dui quis feugiat. Donec finibus lacus blandit</p>
