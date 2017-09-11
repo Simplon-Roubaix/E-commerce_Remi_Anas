@@ -58,6 +58,7 @@ body #main .prods {
   padding: 0;
 }
 body #main .prods .childCard {
+  background-size: cover;
   z-index: 3;
   margin-top: 0 !important;
   padding: 0;
@@ -66,7 +67,7 @@ body #main .prods .childCard .colorBack {
   height: 270px;
   text-shadow: 0 0 40px black;
   font-weight: bold;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 body #main .prods .childCard .colorBack:hover {
   background-color: transparent !important;
@@ -80,7 +81,7 @@ body #main .prods .childCard .colorBack .card-title {
 }
 body #main .prods .childCard .colorBack p {
   color: white;
-  width: 60%;
+  max-width: 250px;
   padding-left: 20%;
 }
 body #main .prods .childCard .colorBack form {
@@ -93,10 +94,54 @@ body #main .prods .childCard .colorBack form .viewChild {
   position: relative;
   background-color: #efd334;
   color: white;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 body #main .prods .childCard .colorBack form .viewChild:hover {
   background-color: #827218;
 }
+
+
+
+/*footer*/
+.bg-primary {
+ background-color: #000 !important;
+}
+
+.bg-circle
+{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  padding: 14px 4px;
+  color: #ececec;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.bg-circle-outline
+{
+  width: 50px;
+  height: 50px;
+  color:smoke;
+  padding: 8px 2px;
+  border: 2px solid;
+  border-color: smoke;
+  border-radius: 50%;
+}
+
+
+.bg-circle a, a:hover, .media a:focus
+{
+  text-decoration: none !important;
+  outline: none;
+  color: #ececec;
+}
+.bg-circle-outline a, a:hover, .media a:focus
+{
+  text-decoration: none !important;
+  outline: none;
+  color: #ececec;
+}
+
 
 /*# sourceMappingURL=style.css.map */
