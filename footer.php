@@ -10,7 +10,6 @@
         $(".colorBack").mouseover(function(){
           $(this).find(".viewChild").show();
         })
-
         $(".colorBack").mouseout(function(){
           $(this).find(".viewChild").hide();
         })

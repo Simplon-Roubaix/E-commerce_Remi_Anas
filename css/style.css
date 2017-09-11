@@ -58,6 +58,7 @@ body #main .prods {
   padding: 0;
 }
 body #main .prods .childCard {
+  background-size: cover;
   z-index: 3;
   margin-top: 0 !important;
   padding: 0;
@@ -66,7 +67,7 @@ body #main .prods .childCard .colorBack {
   height: 270px;
   text-shadow: 0 0 40px black;
   font-weight: bold;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 body #main .prods .childCard .colorBack:hover {
   background-color: transparent !important;
@@ -80,7 +81,7 @@ body #main .prods .childCard .colorBack .card-title {
 }
 body #main .prods .childCard .colorBack p {
   color: white;
-  width: 60%;
+  max-width: 250px;
   padding-left: 20%;
 }
 body #main .prods .childCard .colorBack form {
@@ -93,7 +94,7 @@ body #main .prods .childCard .colorBack form .viewChild {
   position: relative;
   background-color: #efd334;
   color: white;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 body #main .prods .childCard .colorBack form .viewChild:hover {
   background-color: #827218;
