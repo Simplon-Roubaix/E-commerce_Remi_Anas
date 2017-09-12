@@ -26,9 +26,9 @@
         <script src="js/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     </head>
+    <?php include ("prods.php");?>
     <body>
-
       <header class="" id="header">
-            <h1 class="">Le Plaisir <br>d'Adopter</h1>
-            <input class="js-scrollTo" type="button" onclick="scrollDown()" value="Prendre un Coeur >">
+            <h1 class=""><?php echo $info['h1'] ?></h1>
+            <input class="js-scrollTo" type="button" value="Prendre un Coeur >">
       </header>
