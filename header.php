@@ -1,5 +1,10 @@
 <?php session_start();
-  $_SESSION['connexion']=false;
+
+  if (isset($_SESSION['connexion'])) {
+  }
+  else {
+    $_SESSION['connexion']=false;
+  };
  ?>
 <!doctype html>
 <html class="no-js" lang="FR">
@@ -42,7 +47,7 @@
           <div class="collapse navbar-collapse " id="navbarText">
             <ul class="navbar-nav mr-auto">
               <?php
-              if ($_SESSION['connexion']==false) {
+              if ($_SESSION['connexion']!=true) {
                 ?>
               <li class="nav-item">
                 <a class="nav-link" href="connexion.php?connexion=connexion">Connexion</a>
@@ -57,6 +62,9 @@
               ?>
               <li class="nav-item">
                 <a class="nav-link" href="#">Ajouter un enfant</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="post/deconnexion.php">Deconnexion</a>
               </li>
               <?php
               }
