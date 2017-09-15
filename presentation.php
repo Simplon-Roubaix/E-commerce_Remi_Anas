@@ -1,3 +1,7 @@
+<div id="header" class="">
+  <h1 class=""><?php echo $info['h1'] ?></h1>
+  <input class="js-scrollTo" type="button" value="Prendre un Coeur >">
+</div>
 <main class="" id="main">
   <section class=" prods col-sm-12 col-md-12 col-lg-12 mt-12">
     <?php
