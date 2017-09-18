@@ -8,6 +8,7 @@
           <form action="post/add_post.php">
             <div class="row">
               <div class="col-md-6">
+                
                 <?php
                   include('prods.php');
                   foreach($coordonnees as $cle => $element)

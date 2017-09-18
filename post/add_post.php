@@ -2,7 +2,10 @@
 
   include('connexionSQL.php');
 
-  $coordonnees=array(
+
+
+  $req=$bdd->prepare('INSERT INTO Listing_Enfants(nom_enfant,id_image,age_enfant,pays_enfant,don_enfant,info_supp,garantie,conseil,ref_enfant) VALUES(:nom_enfant,:id_image,:age_enfant,:pays_enfant,:don_enfant,:info_supp,:garantie,:conseil,:ref_enfant)');
+  $req->execute(array(
     'nom_enfant'=>$_POST['nom_enfant'],
     'id_image'=>$_POST['id_image'],
     'age_enfant'=>$_POST['age_enfant'],
@@ -12,9 +15,6 @@
     'garantie'=>$_POST['garantie'],
     'conseil'=>$_POST['conseil'],
     'ref_enfant'=>$_POST['ref_enfant']
-  );
-
-  $req=$bdd->prepare('INSERT INTO Listing_Enfants(nom_enfant,id_image,age_enfant,pays_enfant,don_enfant,info_supp,garantie,conseil,ref_enfant) VALUES(:nom_enfant,:id_image,:age_enfant,:pays_enfant,:don_enfant,:info_supp,:garantie,:conseil,:ref_enfant)');
-  $req->execute($coordonnees);
+  ););
 
  ?>
