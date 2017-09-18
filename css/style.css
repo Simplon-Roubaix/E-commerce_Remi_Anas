@@ -143,6 +143,11 @@ body #main .prods .childCard .colorBack form .viewChild:hover {
   background-color: #827218;
 }
 
+/*PAGE ADD @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+#add{
+  background-color: rgba(255, 255, 255,0.8);
+  padding: 90px 0;
+}
 
 
 /*footer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/

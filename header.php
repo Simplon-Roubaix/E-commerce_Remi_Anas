@@ -1,8 +1,8 @@
 <?php session_start();
-
   if (isset($_SESSION['connexion'])) {
   }
   else {
+    $_SESSION['admin']=false;
     $_SESSION['connexion']=false;
   };
  ?>
@@ -42,7 +42,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <h2><strong><a class="navbar-brand ml-1 navbar-brand" href="#">Le Plaisir d'Adopter</a></strong></h2>
+          <h2><strong><a class="navbar-brand ml-1 navbar-brand" href="index.php">Le Plaisir d'Adopter</a></strong></h2>
 
           <div class="collapse navbar-collapse " id="navbarText">
             <ul class="navbar-nav mr-auto">
@@ -59,10 +59,15 @@
             }
             // SI non connecté
             else {
+              // SI ADMIN
+              if ($_SESSION['admin']==true) {
+                ?>
+                <li class="nav-item">
+                  <a class="nav-link" href="add.php">Ajouter un enfant</a>
+                </li>
+                <?php
+              };
               ?>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Ajouter un enfant</a>
-              </li>
               <li class="nav-item">
                 <a class="nav-link" href="post/deconnexion.php">Deconnexion</a>
               </li>

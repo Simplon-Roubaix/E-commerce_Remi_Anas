@@ -1,11 +1,16 @@
-<?php include('header.php');
+<?php
+$connexion=htmlspecialchars($_GET['connexion']);
+if ($_GET['connexion']) {
+  if (isset($_GET['connexion'])) {
+
+include('header.php');
   if ($_SESSION['connexion']==false) {
     ?>
     <main class="container" id="mainConnexion">
     <?php
 
     // SI connexion
-    if ($_GET['connexion']=='connexion') {
+    if ($connexion=='connexion') {
       ?>
       <div >
         <div class="card card-container">
@@ -15,7 +20,7 @@
             <input type="hidden" name="addOrSign" value="connexion">
             <input type="text" name="compte" class="form-control" placeholder="Utilisateur" required autofocus>
             <input type="password" name="mdp" class="form-control" placeholder="Mot de passe" required>
-            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Connexion</button>
           </form><!-- /form -->
         </div><!-- /card-container -->
       </div><!-- /container -->
@@ -23,7 +28,7 @@
     }
 
     // SI CREER COMPTE
-    elseif ($_GET['connexion']=='creer') {
+    elseif ($connexion=='creer') {
       ?>
       <div class="card">
         <form class="form-horizontal" role="form" method="POST" action="post/creer_compte.php">
@@ -82,10 +87,20 @@
         </form>
       </div>
       <?php
-    }
+      }
+      else{
+        ?>
+        <div class="mt-5 mb-5 card">
+          <h2><strong><?php echo "ERROR" ?></strong></h2>
+        </div>
+        <?php
+      }
   ?>
   </main>
   <?php
+    }
+    include('footer.php');
+  }
+
 }
 ?>
-<?php include('footer.php') ?>
