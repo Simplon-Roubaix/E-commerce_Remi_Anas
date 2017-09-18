@@ -6,8 +6,9 @@ try
 }
 catch(Exception $e)
 {
+  $bdd = new PDO('mysql:host=localhost;dbname=Le_Plaisir_d_Adopter;charset=utf8', 'root', '1403ha729',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+
   // En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : '.$e->getMessage());
 }
 
  ?>
