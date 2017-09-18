@@ -48,11 +48,12 @@
                 <div class="col-md-4">
                   <form>
                     <legend><span class="glyphicon glyphicon-globe"></span> Ajouter un enfant</legend>
-                    <h5>Droit</h5>
-                    <p>Inpunitate Isauri peius adulescentem iactitabant feris capiti excursibus motibus obiecti Namque Isauri oppidum amphitheatrali indignitate sunt eorum haec bella sunt.</p>
+                    <h5>Ordre</h5>
+                    <p>La MAI veille au respect des engagements souscrits par la France dans le cadre de la convention de La Haye de 1993 sur la protection des enfants et la coopération internationale en matière d’adoption (CLH)..</p>
                     <hr>
-                    <h5>Droit</h5>
-                    <p>Inpunitate Isauri peius adulescentem iactitabant feris capiti excursibus motibus obiecti Namque Isauri oppidum amphitheatrali indignitate sunt eorum haec bella sunt.</p>
+                    <h5>Infos</h5>
+                    <p>Actuellement, l'AFA travaille avec près de trente pays.<br>
+                      La mission de l'AFA est de vous informer et vous accompagner dans votre projet d'adoption</p>
                     </form>
                   </div>
                 </div>
