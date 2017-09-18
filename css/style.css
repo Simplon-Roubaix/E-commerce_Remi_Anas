@@ -203,11 +203,10 @@ body #main .prods .childCard .colorBack form .viewChild:hover {
   padding: 50px 0;
 }
 
-<<<<<<< HEAD
 .CodeBarre {
   font-family: 'Libre Barcode 39 Text', cursive;
   font-size: 30px;
-=======
+
 /*
  * Specific styles of signin component
  */
@@ -283,5 +282,4 @@ body #main .prods .childCard .colorBack form .viewChild:hover {
     -moz-transition: all 0.218s;
     -webkit-transition: all 0.218s;
     transition: all 0.218s;
->>>>>>> aa26cdd1dcd3c5ea507e50ace6f7363b772bbd3f
 }
