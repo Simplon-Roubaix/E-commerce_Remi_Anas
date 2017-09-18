@@ -167,3 +167,8 @@ body #main .prods .childCard .colorBack form .viewChild:hover {
   margin: 0;
   padding: 50px 0;
 }
+
+.CodeBarre {
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-size: 30px;
+}

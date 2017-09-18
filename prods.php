@@ -9,7 +9,7 @@
 
     ['img'=>'img/enfant3.jpg','Nom'=>'Tic','Prenom'=>'Tac','Age'=>'6','Pays'=>'Tanzanie','Description'=>'Ne met pas son doigt dans le nez','Infos supplementaire'=>'Bonne hygiène','Garantie'=>'NaN','Conseil d\'éducation'=>'Lavage à froid reccommandé','Reference produit'=>'TICTAC'],
 
-    ['img'=>'img/enfant4.jpg','Nom'=>'Youss','Prenom'=>'Oumar','Age'=>'4','Pays'=>'Allemagne','Description'=>'Muet','Infos supplementaire'=>'Enfant très calme, il sait se faire discret','Garantie'=>'1 an','Conseil d\'éducation'=>'','Reference produit'=>'MUET'],
+    ['img'=>'img/enfant4.jpg','Nom'=>'Youss','Prenom'=>'Oumar','Age'=>'4','Pays'=>'Allemagne','Description'=>'Muet','Infos supplementaire'=>'Enfant très calme, il sait se faire discret','Garantie'=>'1 an','Conseil d\'éducation'=>'','Reference produit'=>'MUET231'],
 
     ['img'=>'img/enfant5.jpg','Nom'=>'Lefebvre','Prenom'=>'Rémi','Age'=>'8','Pays'=>'Afrique centre','Description'=>'Sourd','Infos supplementaire'=>'Lis sur les lèvres','Garantie'=>'3 ans','Conseil d\'éducation'=>'Bien articuler lorsque vous vous adressez à lui','Reference produit'=>'EULNORDISTE789'],
 

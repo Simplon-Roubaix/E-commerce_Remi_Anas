@@ -20,32 +20,34 @@
           <?php Echo $prods[$enfant]['Nom']." ". $prods[$enfant]['Prenom'];
           ?>
 
-        </h1>
+        </h1><br>
 
-        <h2>Caractéristques de l'enfant:</h2>
+        <h2>Caractéristques de l'enfant:</h2><br>
 
         <ul>
+          <li>Agé de: <?php Echo $prods[$enfant]['Age'];
+          ?></li><br>
           <li>Nationalité: <?php Echo $prods[$enfant]['Pays'];
-          ?></li>
+          ?></li><br>
           <li>Petit don de cet enfnant: <?php Echo $prods[$enfant]['Description'];
           ?>
-        </li>
+        </li><br>
         <li>
           Infos supplémentaires: <?php Echo $prods[$enfant]['Infos supplementaire'];
           ?>
-        </li>
+        </li><br>
         <li>
           Modalités de garantie: <?php Echo $prods[$enfant]['Garantie'];
           ?>
-        </li>
+        </li><br>
         <li>
           Conseil d'éducation: <?php Echo $prods[$enfant]['Conseil d\'éducation'];
           ?>
-        </li>
+        </li><br>
         <li>
-          Réference produit: <?php Echo $prods[$enfant]['Reference produit'];
-          ?>
-        </li>
+          Réference produit: <span class="CodeBarre"><?php Echo $prods[$enfant]['Reference produit'];
+          ?></span>
+        </li><br>
 
 
       </ul>

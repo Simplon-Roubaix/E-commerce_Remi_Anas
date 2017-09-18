@@ -10,6 +10,7 @@
           <!-- Font family -->
 
         <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Satisfy" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
 
 
 	      <link rel="icon" href="img/logo.png">
