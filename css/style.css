@@ -1,6 +1,8 @@
 body, html {
   margin: 0;
   width: 100%;
+  position: absolute;
+
 }
 
 img {
@@ -17,11 +19,36 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+body #navheader{
+  background-color: rgba(35,35,35,0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  padding: 0 16px;
+}
+body #navheader a{
+  color: white;
+  position: relative;
+}
+body #navheader a::after{
+  content:'';
+  position: absolute;
+  background-color: white;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  transition: 0.2s;
+}
+body #navheader a:hover::after{
+  width: 100%;
+}
 body #header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  color: white;
 }
 body #header h1 {
   margin: auto;
@@ -39,13 +66,16 @@ body #header input {
   position: relative;
   margin-bottom: 50px;
   background-color: #27AE61;
-  color: white;
   transition: 0.2s;
 }
 body #header input:hover {
   background-color: #006B14;
 }
 
+/*MAIN @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+body #main {
+  margin: 0;
+}
 body #main .intro {
   width: 100%;
   margin: 0;
@@ -113,9 +143,14 @@ body #main .prods .childCard .colorBack form .viewChild:hover {
   background-color: #827218;
 }
 
+/*PAGE ADD @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+#add{
+  background-color: rgba(255, 255, 255,0.8);
+  padding: 90px 0;
+}
 
 
-/*footer*/
+/*footer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 .footerUp{
   background-color: rgba(255, 255, 255,0.8) !important;
 
@@ -162,13 +197,91 @@ body #main .prods .childCard .colorBack form .viewChild:hover {
 
 
 /*# sourceMappingURL=style.css.map */
-/*Remi said "Anass you have to use the 300 lines for css"*/
+/*Remi said "Anass you have to use the 300 lines for css @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"*/
 .description{
   margin: 0;
   padding: 50px 0;
 }
 
+<<<<<<< HEAD
 .CodeBarre {
   font-family: 'Libre Barcode 39 Text', cursive;
   font-size: 30px;
+=======
+/*
+ * Specific styles of signin component
+ */
+/*
+ * Gonnexion @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ */
+#mainConnexion .card-container.card {
+    max-width: 350px;
+    padding: 40px 40px;
+}
+
+#mainConnexion .btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/*
+ * Card component
+ */
+#mainConnexion .card {
+    background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#mainConnexion .profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#mainConnexion .form-signin input{
+    margin-bottom: 10px;
+}
+
+#mainConnexion .form-signin .form-control:focus {
+    border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+#mainConnexion .btn.btn-signin {
+    /*background-color: #4d90fe; */
+    background-color: rgb(104, 145, 162);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+>>>>>>> aa26cdd1dcd3c5ea507e50ace6f7363b772bbd3f
 }

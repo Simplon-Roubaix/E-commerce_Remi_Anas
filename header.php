@@ -1,3 +1,11 @@
+<?php session_start();
+  if (isset($_SESSION['connexion'])) {
+  }
+  else {
+    $_SESSION['admin']=false;
+    $_SESSION['connexion']=false;
+  };
+ ?>
 <!doctype html>
 <html class="no-js" lang="FR">
     <head>
@@ -27,9 +35,47 @@
         <script src="js/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     </head>
+    <?php include ("prods.php");?>
     <body>
+      <header class="">
+        <nav id="navheader" class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <header class="" id="header">
-            <h1 class="">Le Plaisir <br>d'Adopter</h1>
-            <input class="js-scrollTo" type="button" onclick="scrollDown()" value="Prendre un Coeur >">
+          <h2><strong><a class="navbar-brand ml-1 navbar-brand" href="index.php">Le Plaisir d'Adopter</a></strong></h2>
+
+          <div class="collapse navbar-collapse " id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <?php
+              if ($_SESSION['connexion']!=true) {
+                ?>
+              <li class="nav-item">
+                <a class="nav-link" href="connexion.php?connexion=connexion">Connexion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="connexion.php?connexion=creer">Créer un compte</a>
+              </li>
+              <?php
+            }
+            // SI non connecté
+            else {
+              // SI ADMIN
+              if ($_SESSION['admin']==true) {
+                ?>
+                <li class="nav-item">
+                  <a class="nav-link" href="add.php">Ajouter un enfant</a>
+                </li>
+                <?php
+              };
+              ?>
+              <li class="nav-item">
+                <a class="nav-link" href="post/deconnexion.php">Deconnexion</a>
+              </li>
+              <?php
+              }
+              ?>
+            </ul>
+          </div>
+        </nav>
       </header>
