@@ -28,5 +28,17 @@
       "h1"=>"Le Plaisir<br> d'Adopter",
       "dr"=>"Dre",
       "intro"=>"Problème de fertilité ?"
-    ]
+    ];
+    $coordonnees = array (
+        'Nom' => 'nom_enfant',
+        'Age' => 'age_enfant',
+        'Pays' => 'pays_enfant',
+        'Don enfant' => 'don_enfant',
+        'Infos' => 'info_supp',
+        'Garantie' => 'garantie',
+        'Conseil' => 'conseil',
+        'REF'=>'ref_enfant'
+      );
+
+
  ?>

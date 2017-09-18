@@ -6,24 +6,31 @@
   <section class=" prods col-sm-12 col-md-12 col-lg-12 mt-12">
     <?php
     include ("prods.php");
-    foreach ($prods as $key => $value) {
 
+    include ("post/connexionSQL.php");
+    $reponse=$bdd->query('SELECT * FROM Listing_Enfants ORDER BY id_enfant LIMIT 0,8');
+    $colorTab=0;
+    while ($donnees=$reponse->fetch()) {
       ?>
 
-      <div style="background-image:url('<?php echo $value['img']?>')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
-        <div class="colorBack" style='background-color:<?php echo $colorBack[$key]?>'>
-          <h4 class="card-title"><?php echo $value['Prenom'] . ' ' . $value['Nom']?></h4>
-          <p><?php echo $value['Pays'] ?> <?php echo $value['Age'] ?> ans  <?php echo $value['Description'] ?></p>
+      <div style="background-image:url('img/enfant0.jpg')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
+        <div class="colorBack" style='background-color:<?php echo $colorBack[$colorTab]?>'>
+          <h4 class="card-title"><?php echo $donnees['nom_enfant']?></h4>
+          <p><?php echo $donnees['pays_enfant'] ?> <?php echo $donnees['age_enfant'] ?> ans  <?php echo $donnees['infos_supp'] ?></p>
           <form class="" action="description.php" method="post">
-            <input type="hidden" name="enfant" value="<?php echo $key ?>">
+            <input type="hidden" name="enfant" value="<?php echo $donnees['id_enfant'] ?>">
             <input class="viewChild" type="submit" value="Voir l'enfant">
           </form>
         </div>
       </div>
 
       <?php
-    };
+      $colorTab++;
+
+    }
+
     ?>
+    
 
   </section>
 

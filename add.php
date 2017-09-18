@@ -9,21 +9,12 @@
             <div class="row">
               <div class="col-md-6">
                 <?php
-
-                  $coordonnees = array (
-                      'Nom' => 'nom',
-                      'Prénom' => 'prenom',
-                      'Age' => 'age',
-                      'Pays' => 'pays',
-                      'Infos' => 'infos',
-                      'Conseil' => 'conseil'
-                    );
-
+                  include('prods.php');
                   foreach($coordonnees as $cle => $element)
                   {
                     ?>
                     <div class="form-group">
-                       <input type="text" class="form-control" id="<?php echo $element?>" placeholder="<?php echo $cle?>" required="required" />
+                       <input name="<?php echo $cle ?>" type="text" class="form-control" placeholder="<?php echo $cle?>" required="required" />
                      </div>
                     <?php
                   }
