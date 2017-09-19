@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-8">
         <div class="well well-sm">
-          <form action="post/add_post.php" method="post">
+          <form action="post/add_post.php" method="post" enctype="multipart/form-data">
             <div class="row">
               <div class="col-md-6">
 
@@ -27,10 +27,10 @@
                           placeholder="Conseil"></textarea>
                         </div>
                         <p>Ajouter une photo</p>
-                        <input class="btn btn-primary" type="submit" value="Parcourir..">
+                        <input class="btn btn-primary" name="image" type="file" value="Parcourir..">
                       </div>
                       <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                        <button type="submit" class="btn btn-primary pull-right">
                           Ajouter</button>
                         </div>
                       </div>

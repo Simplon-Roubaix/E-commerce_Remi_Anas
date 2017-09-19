@@ -8,9 +8,14 @@
     include ("prods.php");
 
     include ("post/connexionSQL.php");
-    $reponse=$bdd->query('SELECT * FROM Listing_Enfants ORDER BY id_enfant DESC LIMIT 0,8');
+    $reponse=$bdd->query('SELECT *
+      FROM Listing_Img_Enfant
+      INNER JOIN Listing_Enfants
+      ON Listing_Enfants.id_enfant = Listing_Img_Enfant.id_img
+      ORDER BY id_enfant DESC LIMIT 0,8');
     $colorTab=0;
     while ($donnees=$reponse->fetch()) {
+
       ?>
 
       <div style="background-image:url('img/enfant0.jpg')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
