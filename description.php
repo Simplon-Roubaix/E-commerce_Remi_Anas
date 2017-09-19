@@ -1,7 +1,8 @@
 <body>
   <?php
   include ("header.php");
-  include ("prods.php");
+  include ("post/connexionSQL.php");
+
 
   $enfant = $_POST['enfant'];
 
@@ -14,10 +15,19 @@
 
       <div class="col-sm-12 col-md-6 col-lg-6">
 
+        <?php
+        $reponse=$bdd->query('SELECT *
+          FROM Listing_Img_Enfant img
+          INNER JOIN Listing_Enfants enfant
+          ON enfant.id_enfant = img.id_img
+          WHERE id_enfant = ' . $enfant . '');
+
+          while ($donnees=$reponse->fetch()) {
+         ?>
 
         <h1>
 
-          <?php Echo $prods[$enfant]['Nom']." ". $prods[$enfant]['Prenom'];
+          <?php Echo $donnees['nom_enfant'];
           ?>
 
         </h1>
@@ -25,41 +35,27 @@
         <h2>Caractéristques de l'enfant:</h2>
 
         <ul>
-          <li>Nationalité: <?php Echo $prods[$enfant]['Pays'];
-          ?></li>
-          <li>Petit don de cet enfnant: <?php Echo $prods[$enfant]['Description'];
-          ?>
-        </li>
-        <li>
-          Infos supplémentaires: <?php Echo $prods[$enfant]['Infos supplementaire'];
-          ?>
-        </li>
-        <li>
-          Modalités de garantie: <?php Echo $prods[$enfant]['Garantie'];
-          ?>
-        </li>
-        <li>
-          Conseil d'éducation: <?php Echo $prods[$enfant]['Conseil d\'éducation'];
-          ?>
-        </li>
-        <li>
-          Réference produit: <?php Echo $prods[$enfant]['Reference produit'];
-          ?>
-        </li>
 
+          <li>Nationalité: <?php Echo $donnees['pays_enfant'];?></li>
 
-      </ul>
+          <li>Petit don de cet enfnant: <?php Echo $donnees['don_enfant'];?></li>
+
+          <li>Infos supplémentaires: <?php Echo $donnees['infos_supp'];?></li>
+
+          <li>Conseil d'éducation: <?php Echo $donnees['conseil'];?></li>
+
+        </ul>
     </div>
-
 
 
     <!-- Photo de l'enfance -->
 
     <div class="col-sm-12 col-md-6 col-lg-6">
 
-      <img src=" <?php Echo $prods[$enfant]['img']; ?>  " alt="">
+      <img src=" <?php Echo $donnees['source_img']; ?>  " alt="">
 
     </div>
+    <?php } ?>
 
   </div>
 </main>
