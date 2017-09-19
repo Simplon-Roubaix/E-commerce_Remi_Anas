@@ -2,6 +2,7 @@
   if (isset($_SESSION['connexion'])) {
   }
   else {
+    $_SESSION['user']='User';
     $_SESSION['admin']=false;
     $_SESSION['connexion']=false;
   };
@@ -47,6 +48,7 @@
           <div class="collapse navbar-collapse " id="navbarText">
             <ul class="navbar-nav mr-auto">
               <?php
+              // SI non connecté
               if ($_SESSION['connexion']!=true) {
                 ?>
               <li class="nav-item">
@@ -57,7 +59,7 @@
               </li>
               <?php
             }
-            // SI non connecté
+            // SI connecté
             else {
               // SI ADMIN
               if ($_SESSION['admin']==true) {
@@ -70,6 +72,9 @@
               ?>
               <li class="nav-item">
                 <a class="nav-link" href="post/deconnexion.php">Deconnexion</a>
+              </li>
+              <li>
+                <strong class="nav-link text-white">Bonjour <?php echo $_SESSION['user'] ?></strong>
               </li>
               <?php
               }

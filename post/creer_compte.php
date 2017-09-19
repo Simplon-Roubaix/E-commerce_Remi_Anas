@@ -17,6 +17,8 @@
         // USER
         elseif ($donnees['compte']==$_POST['compte']) {
           $_SESSION['connexion']=true;
+          $_SESSION['user']=$_POST['compte'];
+
         }
       }
     }

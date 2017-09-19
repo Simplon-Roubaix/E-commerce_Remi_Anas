@@ -10,9 +10,10 @@
       "dr"=>"Dre",
       "intro"=>"Problème de fertilité ?"
     ];
+    
     $coordonnees = array (
         'Nom' => 'nom_enfant',
-        'Age' => 'age_enfant',
+        'Age en Chiffre (ex:9)' => 'age_enfant',
         'Pays' => 'pays_enfant',
         'Don enfant' => 'don_enfant',
         'Infos' => 'infos_supp'
