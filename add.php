@@ -5,17 +5,17 @@
     <div class="row">
       <div class="col-md-8">
         <div class="well well-sm">
-          <form action="post/add_post.php">
+          <form action="post/add_post.php" method="post">
             <div class="row">
               <div class="col-md-6">
-                
+
                 <?php
                   include('prods.php');
                   foreach($coordonnees as $cle => $element)
                   {
                     ?>
                     <div class="form-group">
-                       <input name="<?php echo $cle ?>" type="text" class="form-control" placeholder="<?php echo $cle?>" required="required" />
+                       <input name="<?php echo $element ?>" type="text" class="form-control" placeholder="<?php echo $cle?>" required="required" />
                      </div>
                     <?php
                   }
@@ -23,11 +23,11 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                          <textarea name="description" id="description" class="form-control" rows="9" cols="25" required="required"
-                          placeholder="Description"></textarea>
+                          <textarea name="conseil"  class="form-control" rows="9" cols="25" required="required"
+                          placeholder="Conseil"></textarea>
                         </div>
                         <p>Ajouter une photo</p>
-                        <input class="btn btn-primary" type="submit" name="" value="Parcourir..">
+                        <input class="btn btn-primary" type="submit" value="Parcourir..">
                       </div>
                       <div class="col-md-12">
                         <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">

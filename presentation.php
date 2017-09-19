@@ -8,7 +8,7 @@
     include ("prods.php");
 
     include ("post/connexionSQL.php");
-    $reponse=$bdd->query('SELECT * FROM Listing_Enfants ORDER BY id_enfant LIMIT 0,8');
+    $reponse=$bdd->query('SELECT * FROM Listing_Enfants ORDER BY id_enfant DESC LIMIT 0,8');
     $colorTab=0;
     while ($donnees=$reponse->fetch()) {
       ?>
@@ -30,7 +30,7 @@
     }
 
     ?>
-    
+
 
   </section>
 
