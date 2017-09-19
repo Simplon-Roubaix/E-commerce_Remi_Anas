@@ -10,6 +10,7 @@
         if ($_POST['compte']=='Anass' OR $_POST['compte']=='Remi') {
           if ($donnees['compte']==$_POST['compte']) {
             $_SESSION['connexion']=true;
+            $_SESSION['user']=$_POST['compte'];
             $_SESSION['admin']=true;
           }
         }
@@ -17,12 +18,16 @@
         // USER
         elseif ($donnees['compte']==$_POST['compte']) {
           $_SESSION['connexion']=true;
+          $_SESSION['user']=$_POST['compte'];
+
         }
       }
     }
   }
   if ($_POST['addOrSign']=='creer') {
     $_SESSION['connexion']=true;
+    $_SESSION['user']=$_POST['compte'];
+
     $req=$bdd->prepare('INSERT INTO comptes(compte, mdp) VALUES(:compte,:mdp)');
     $req->execute(array(
       'compte'=> $_POST['compte'],
