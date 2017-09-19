@@ -17,7 +17,6 @@
 $img='../img/' . basename($_FILES['image']['name']);
 $imgBDD='img/' . basename($_FILES['image']['name']);
 
-var_dump($img);
   if (isset($_FILES['image']) AND $_FILES['image']['error'] == 0){
     // Testons si le fichier n'est pas trop gros
 
