@@ -9,16 +9,14 @@
 
     include ("post/connexionSQL.php");
     $reponse=$bdd->query('SELECT *
-      FROM Listing_Img_Enfant
-      INNER JOIN Listing_Enfants
-      ON Listing_Enfants.id_enfant = Listing_Img_Enfant.id_img
+      FROM Listing_Img_Enfant img
+      INNER JOIN Listing_Enfants enfant
+      ON enfant.id_enfant = img.id_img
       ORDER BY id_enfant DESC LIMIT 0,8');
     $colorTab=0;
     while ($donnees=$reponse->fetch()) {
-
       ?>
-
-      <div style="background-image:url('img/enfant0.jpg')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
+      <div style="background-image:url('<?php echo $donnees['source_img']?>')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
         <div class="colorBack" style='background-color:<?php echo $colorBack[$colorTab]?>'>
           <h4 class="card-title"><?php echo $donnees['nom_enfant']?></h4>
           <p><?php echo $donnees['pays_enfant'] ?> <?php echo $donnees['age_enfant'] ?> ans  <?php echo $donnees['infos_supp'] ?></p>

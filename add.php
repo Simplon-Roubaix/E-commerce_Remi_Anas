@@ -26,8 +26,8 @@
                           <textarea name="conseil"  class="form-control" rows="9" cols="25" required="required"
                           placeholder="Conseil"></textarea>
                         </div>
-                        <p>Ajouter une photo</p>
-                        <input class="btn btn-primary" name="image" type="file" value="Parcourir..">
+                        <p><strong>Ajouter une photo</strong></p>
+                        <input class="mb-3 btn btn-primary" name="image" type="file" value="Parcourir..">
                       </div>
                       <div class="col-md-12">
                         <button type="submit" class="btn btn-primary pull-right">
