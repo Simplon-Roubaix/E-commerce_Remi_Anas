@@ -31,12 +31,12 @@
     ];
     $coordonnees = array (
         'Nom' => 'nom_enfant',
+        'id image(test)'=>'id_image',
         'Age' => 'age_enfant',
         'Pays' => 'pays_enfant',
         'Don enfant' => 'don_enfant',
-        'Infos' => 'info_supp',
+        'Infos' => 'infos_supp',
         'Garantie' => 'garantie',
-        'Conseil' => 'conseil',
         'REF'=>'ref_enfant'
       );
 
