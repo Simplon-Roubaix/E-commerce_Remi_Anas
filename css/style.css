@@ -21,6 +21,8 @@ body {
 }
 body #navheader{
   background-color: rgba(35,35,35,0.5);
+  -webkit-background-color: rgba(35,35,35,0.5);
+  -moz-background-color: rgba(35,35,35,0.5);
   position: fixed;
   width: 100%;
   z-index: 10;
