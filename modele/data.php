@@ -22,6 +22,26 @@ function get_enfant(){
     WHERE id_enfant = ' . $enfant_select . '');
 
   return $enfant;
+}
+
+function get_comptes(){
+  global $bdd;
+  $comptes=$bdd->query('SELECT * FROM comptes');
+
+  return $comptes;
+}
+
+
+function insert_new_compte($compte,$mdp){
+  global $bdd;
+
+  $req=$bdd->prepare('INSERT INTO comptes(compte, mdp) VALUES(:compte,:mdp)');
+  $req->execute(array(
+    'compte'=> $compte,
+    'mdp'=> $mdp
+  ));
 
 }
+
+
  ?>
