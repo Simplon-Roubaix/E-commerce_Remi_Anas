@@ -39,7 +39,7 @@
     </div>
     <div class=" col-sm-12 col-md-12 col-lg-5 mt-5">
       <figure class="dr float-left col-sm-5 col-md-5 col-lg-5">
-        <img src="img/dr.jpg" alt="">
+        <img src="../img/dr.jpg" alt="">
       </figure>
       <h2 class="">Dr.<?php echo $info['dr'] ?></h2>
       <p><strong>Cras metustellus, vehicula facilisis.</strong></p>

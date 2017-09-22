@@ -4,5 +4,5 @@ $_SESSION['connexion']=false;
 $_SESSION['admin']=false;
 
 session_destroy();
-  header('Location:../index.php')
+  header('Location:index.php')
  ?>
