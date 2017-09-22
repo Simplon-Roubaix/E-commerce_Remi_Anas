@@ -14,7 +14,7 @@ include_once('template/header.php');
         <div class="card card-container">
           <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
           <p id="profile-name" class="profile-name-card"></p>
-          <form class="form-signin" role="form" action="post/creer_compte.php" method="POST">
+          <form class="form-signin" role="form" action="creer_compte.php" method="POST">
             <input type="hidden" name="addOrSign" value="connexion">
             <input type="text" name="compte" class="form-control" placeholder="Utilisateur" required autofocus>
             <input type="password" name="mdp" class="form-control" placeholder="Mot de passe" required>
@@ -29,7 +29,7 @@ include_once('template/header.php');
     elseif ($connexion=='creer') {
       ?>
       <div class="card">
-        <form class="form-horizontal" role="form" method="POST" action="post/creer_compte.php">
+        <form class="form-horizontal" role="form" method="POST" action="creer_compte.php">
           <input type="hidden" name="addOrSign" value="creer">
           <div class="row">
             <div class="col-md-3"></div>

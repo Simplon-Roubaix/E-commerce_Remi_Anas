@@ -1,8 +1,10 @@
 <?php
+  require_once("../modele/data.php");
+
   session_start();
 
   if ($_POST['addOrSign']=='connexion') {
-    $comptes= get_comptes()
+    $comptes= get_comptes();
     while ($donnees=$comptes->fetch()) {
       if ($donnees['mdp']==$_POST['mdp']) {
         // ADMMIN

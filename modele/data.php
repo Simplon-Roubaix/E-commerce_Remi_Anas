@@ -40,8 +40,31 @@ function insert_new_compte($compte,$mdp){
     'compte'=> $compte,
     'mdp'=> $mdp
   ));
-
 }
+function insert_img($nom,$age,$pays,$don,$infos,$conseil,$file){
+  global $bdd;
 
+  // TRAITEMENT DE L IMAGE
+  $img='../img/' . basename($file['name']);
+  $imgBDD='img/' . basename($file['name']);
+
+  $req=$bdd->prepare('INSERT INTO Listing_Enfants(nom_enfant,age_enfant,pays_enfant,don_enfant,infos_supp,conseil) VALUES(:nom_enfant,:age_enfant,:pays_enfant,:don_enfant,:infos_supp,:conseil)');
+  $req->execute(array(
+    'nom_enfant'=>$nom,
+    'age_enfant'=>$age,
+    'pays_enfant'=>$pays,
+    'don_enfant'=>$don,
+    'infos_supp'=>$infos,
+    'conseil'=>$conseil
+  ));
+
+  move_uploaded_file($file['tmp_name'], $img );
+
+  $req=$bdd->prepare('INSERT INTO Listing_Img_Enfant(source_img, alt_img) VALUES(:image, :alt)');
+  $req->execute(array(
+    'image'=> $imgBDD,
+    'alt'=> '0'
+  ));
+}
 
  ?>

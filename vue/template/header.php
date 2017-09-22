@@ -64,13 +64,13 @@
               if ($_SESSION['admin']==true) {
                 ?>
                 <li class="nav-item">
-                  <a class="nav-link" href="add.php">Ajouter un enfant</a>
+                  <a class="nav-link" href="new_post.php">Ajouter un enfant</a>
                 </li>
                 <?php
               };
               ?>
               <li class="nav-item">
-                <a class="nav-link" href="post/deconnexion.php">Deconnexion</a>
+                <a class="nav-link" href="deconnexion.php">Deconnexion</a>
               </li>
               <li>
                 <strong class="nav-link text-white">Bonjour <?php echo $_SESSION['user'] ?></strong>
