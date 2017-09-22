@@ -26,16 +26,15 @@
         <!-- Place favicon.ico in the root directory -->
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
 
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="js/jquery.min.js"></script>
+        <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     </head>
-    <?php include ("prods.php");?>
     <body>
       <header class="">
         <nav id="navheader" class="navbar navbar-toggleable-md navbar-light bg-faded">
@@ -65,13 +64,13 @@
               if ($_SESSION['admin']==true) {
                 ?>
                 <li class="nav-item">
-                  <a class="nav-link" href="add.php">Ajouter un enfant</a>
+                  <a class="nav-link" href="new_post.php">Ajouter un enfant</a>
                 </li>
                 <?php
               };
               ?>
               <li class="nav-item">
-                <a class="nav-link" href="post/deconnexion.php">Deconnexion</a>
+                <a class="nav-link" href="deconnexion.php">Deconnexion</a>
               </li>
               <li>
                 <strong class="nav-link text-white">Bonjour <?php echo $_SESSION['user'] ?></strong>

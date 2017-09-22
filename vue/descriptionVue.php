@@ -1,12 +1,6 @@
 <body>
   <?php
-  include ("header.php");
-  include ("post/connexionSQL.php");
-
-
-  $enfant = $_POST['enfant'];
-
-
+  include ("template/header.php");
   ?>
   <main class="MainEnfant card">
     <div class="row description" >
@@ -16,13 +10,8 @@
       <div class="col-sm-12 col-md-6 col-lg-6">
 
         <?php
-        $reponse=$bdd->query('SELECT *
-          FROM Listing_Img_Enfant img
-          INNER JOIN Listing_Enfants enfant
-          ON enfant.id_enfant = img.id_img
-          WHERE id_enfant = ' . $enfant . '');
 
-          while ($donnees=$reponse->fetch()) {
+          while ($donnees=$enfant->fetch()) {
          ?>
 
         <h1>
@@ -52,7 +41,7 @@
 
     <div class="col-sm-12 col-md-6 col-lg-6">
 
-      <img src=" <?php Echo $donnees['source_img']; ?>  " alt="">
+      <img src="../<?php echo $donnees['source_img'];?>" alt="">
 
     </div>
     <?php } ?>
@@ -62,7 +51,7 @@
 
 
 <?php
-include ("footer.php");
+include ("template/footer.php");
 ?>
 
 </body>

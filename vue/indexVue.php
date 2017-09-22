@@ -1,3 +1,4 @@
+<?php include("template/header.php") ?>
 <div id="header" class="">
   <h1 class=""><?php echo $info['h1'] ?></h1>
   <input class="js-scrollTo" type="button" value="Prendre un Coeur >">
@@ -5,18 +6,12 @@
 <main class="" id="main">
   <section class=" prods col-sm-12 col-md-12 col-lg-12 mt-12">
     <?php
-    include ("prods.php");
 
-    include ("post/connexionSQL.php");
-    $reponse=$bdd->query('SELECT *
-      FROM Listing_Img_Enfant img
-      INNER JOIN Listing_Enfants enfant
-      ON enfant.id_enfant = img.id_img
-      ORDER BY id_enfant DESC LIMIT 0,8');
+
     $colorTab=0;
-    while ($donnees=$reponse->fetch()) {
+    while ($donnees=$enfants->fetch()) {
       ?>
-      <div style="background-image:url('<?php echo $donnees['source_img']?>')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
+      <div style="background-image:url('../<?php echo $donnees['source_img']?>')" class="childCard col-sm-3 col-md-3 col-lg-3 mt-3">
         <div class="colorBack" style='background-color:<?php echo $colorBack[$colorTab]?>'>
           <h4 class="card-title"><?php echo $donnees['nom_enfant']?></h4>
           <p><?php echo $donnees['pays_enfant'] ?> <?php echo $donnees['age_enfant'] ?> ans  <?php echo $donnees['infos_supp'] ?></p>
@@ -44,7 +39,7 @@
     </div>
     <div class=" col-sm-12 col-md-12 col-lg-5 mt-5">
       <figure class="dr float-left col-sm-5 col-md-5 col-lg-5">
-        <img src="img/dr.jpg" alt="">
+        <img src="../img/dr.jpg" alt="">
       </figure>
       <h2 class="">Dr.<?php echo $info['dr'] ?></h2>
       <p><strong>Cras metustellus, vehicula facilisis.</strong></p>
@@ -52,3 +47,8 @@
     </div>
   </section>
 </main>
+
+
+
+
+<?php include("template/footer.php") ?>

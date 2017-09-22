@@ -1,9 +1,7 @@
 <?php
-$connexion=htmlspecialchars($_GET['connexion']);
-if ($_GET['connexion']) {
-  if (isset($_GET['connexion'])) {
 
-include('header.php');
+
+include_once('template/header.php');
   if ($_SESSION['connexion']==false) {
     ?>
     <main class="container" id="mainConnexion">
@@ -16,7 +14,7 @@ include('header.php');
         <div class="card card-container">
           <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
           <p id="profile-name" class="profile-name-card"></p>
-          <form class="form-signin" role="form" action="post/creer_compte.php" method="POST">
+          <form class="form-signin" role="form" action="creer_compte.php" method="POST">
             <input type="hidden" name="addOrSign" value="connexion">
             <input type="text" name="compte" class="form-control" placeholder="Utilisateur" required autofocus>
             <input type="password" name="mdp" class="form-control" placeholder="Mot de passe" required>
@@ -31,7 +29,7 @@ include('header.php');
     elseif ($connexion=='creer') {
       ?>
       <div class="card">
-        <form class="form-horizontal" role="form" method="POST" action="post/creer_compte.php">
+        <form class="form-horizontal" role="form" method="POST" action="creer_compte.php">
           <input type="hidden" name="addOrSign" value="creer">
           <div class="row">
             <div class="col-md-3"></div>
@@ -99,8 +97,5 @@ include('header.php');
   </main>
   <?php
     }
-    include('footer.php');
-  }
-
-}
+    include_once('template/footer.php');
 ?>
