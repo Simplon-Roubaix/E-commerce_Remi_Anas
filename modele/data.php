@@ -32,6 +32,41 @@ function get_comptes(){
 }
 
 
+// CONNEXION
+function connection($name,$mdp,$admin){
+  // ramene la connection
+  global $bdd;
+
+  // ON FAIT UNE QUERY AVEC WHERE LE NAME RENTRE, PUIS ON MET LE MDP DE CETTE ENTRE DANS UNE VARIABLE , PUIS QUON FAIT UN PASSWORD_VERIFY AVEC LE MDP RENTRE ET LA VARIABLE , ON PEUT ARRIVER A QUELQUE CHOSE
+
+  $req=$bdd->prepare('SELECT * FROM comptes WHERE compte=:name');
+  $req->execute(array(
+    'name'=>$name
+  ));
+  $resultat = $req->fetch();
+
+  // on met la ligne dans la variable resultat (si il y en a une);
+  // si resultat est vide (par ce qu'il na trouvé aucune entrée similaire dans le SELECT)
+  if (!$resultat) {
+    return "Nom erroné";
+  }
+  // sinon
+  else{
+    $mdpBDD = $resultat['mdp'];
+    if (password_verify($mdp,$mdpBDD)) {
+      session_start();
+      $_SESSION['connexion']=true;
+      $_SESSION['user']=$_POST['compte'];
+      $_SESSION['admin']=$admin;
+      return "Connecté";
+    }
+    else {
+      return "Nom erroné";
+    }
+  }
+}
+
+
 function insert_new_compte($compte,$mdp){
   global $bdd;
 
@@ -40,7 +75,13 @@ function insert_new_compte($compte,$mdp){
     'compte'=> $compte,
     'mdp'=> $mdp
   ));
+
+  $_SESSION['connexion']=true;
+  $_SESSION['user']=$_POST['compte'];
 }
+
+
+
 function insert_img($nom,$age,$pays,$don,$infos,$conseil,$file){
   global $bdd;
 
