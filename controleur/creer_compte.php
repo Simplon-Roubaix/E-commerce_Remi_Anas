@@ -29,6 +29,9 @@
 
   // CREER COMPTE
   if ($_POST['addOrSign']=='creer') {
+    if ($name=='Admin') {
+      header('Location:index.php');
+    }
 
     // hash
     $mdp = password_hash($mdp,PASSWORD_BCRYPT);
