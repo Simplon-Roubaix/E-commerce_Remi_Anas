@@ -3,34 +3,38 @@
 
   session_start();
 
-  if ($_POST['addOrSign']=='connexion') {
-    $comptes= get_comptes();
-    while ($donnees=$comptes->fetch()) {
-      if ($donnees['mdp']==$_POST['mdp']) {
-        // ADMMIN
-        if ($_POST['compte']=='Anass' OR $_POST['compte']=='Remi') {
-          if ($donnees['compte']==$_POST['compte']) {
-            $_SESSION['connexion']=true;
-            $_SESSION['user']=$_POST['compte'];
-            $_SESSION['admin']=true;
-          }
-        }
 
-        // USER
-        elseif ($donnees['compte']==$_POST['compte']) {
-          $_SESSION['connexion']=true;
-          $_SESSION['user']=$_POST['compte'];
-
-        }
-      }
+  // SECURITY TEST
+  if (isset($_POST['compte']) AND isset($_POST['mdp'])) {
+    if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['compte'])) {
+      $name =$_POST['compte'];
+      $mdp = $_POST['mdp'];
+    }
+    else {
+      header('Location:index.php');
     }
   }
+  else {
+    header('Location:index.php');
+  }
+
+
+  // CONNEXION
+  if ($_POST['addOrSign']=='connexion'){
+    if ($name=='Admin') {
+      $admin=true;
+    }
+    connection($name,$mdp,$admin);
+  }
+
+  // CREER COMPTE
   if ($_POST['addOrSign']=='creer') {
-    $_SESSION['connexion']=true;
-    $_SESSION['user']=$_POST['compte'];
 
-    insert_new_compte($_POST['compte'],$_POST['mdp']);
-
+    // hash
+    $mdp = password_hash($mdp,PASSWORD_BCRYPT);
+    insert_new_compte($name,$mdp);
   };
+
+
   header('Location:index.php');
  ?>

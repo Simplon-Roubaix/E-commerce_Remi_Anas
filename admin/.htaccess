@@ -1,0 +1,4 @@
+AuthName "Page d'administration protégée (text edit)"
+AuthType Basic
+AuthUserFile "/var/www/html/e-commerce/admin/.htpasswd"
+Require valid-user
