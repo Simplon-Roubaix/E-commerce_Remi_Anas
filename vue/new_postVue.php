@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-md-4">
                   <form>
-                    <legend><span class="glyphicon glyphicon-globe"></span> Ajouter un enfant</legend>
+                    <legend><span class="glyphicon glyphicon-globe"></span> Inscrire un enfant</legend>
                     <h5>Ordre</h5>
                     <p>La MAI veille au respect des engagements souscrits par la France dans le cadre de la convention de La Haye de 1993 sur la protection des enfants et la coopération internationale en matière d’adoption (CLH)..</p>
                     <hr>
