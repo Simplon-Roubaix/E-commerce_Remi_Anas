@@ -279,3 +279,13 @@ body #main .prods .childCard .colorBack form .viewChild:hover {
     -webkit-transition: all 0.218s;
     transition: all 0.218s;
 }
+
+#mainList{
+  overflow-x: scroll;
+}
+#mainList .table{
+  background-color: rgba(255, 255, 255,0.8);
+}
+#mainList .supr{
+  color: red !important;
+}

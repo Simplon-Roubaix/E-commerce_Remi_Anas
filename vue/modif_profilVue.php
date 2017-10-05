@@ -40,7 +40,7 @@
                     <hr>
                     <h5>Infos</h5>
                     <p>Aucun moyen de récuperer sont mot de passe perdu où sont nom de compte modifier.<br>
-                      <hr>
+                    <hr>
                     La mission de l'AFA est de vous informer et vous accompagner dans votre projet d'adoption</p>
                     </form>
                   </div>

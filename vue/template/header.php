@@ -27,7 +27,6 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/style.css">
 
@@ -60,25 +59,31 @@
             }
             // SI connecté
             else {
+              ?>
+
+              <li>
+                <strong class="nav-link text-white">Bonjour <?php echo $_SESSION['user'] ?></strong>
+              </li>
+              <?php
               // SI ADMIN
               if ($_SESSION['admin']==true) {
                 ?>
                 <li class="nav-item">
                   <a class="nav-link" href="new_post.php">Ajouter un enfant</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="list.php">Liste des enfants</a>
+                </li>
                 <?php
-              };
-              ?>
-              <li class="nav-item">
+                }
+                ?>
+                <li class="nav-item">
+                  <a class="nav-link" href="modif_profil.php">Modifier profil</a>
+                </li>
+                <li class="nav-item">
                 <a class="nav-link" href="deconnexion.php">Deconnexion</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="modif_profil.php">Modifier profil</a>
-              </li>
-              <li>
-                <strong class="nav-link text-white">Bonjour <?php echo $_SESSION['user'] ?></strong>
-              </li>
-              <?php
+                </li>
+                <?php
               }
               ?>
             </ul>
