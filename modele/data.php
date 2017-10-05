@@ -33,7 +33,7 @@ function get_comptes(){
 
 
 // CONNEXION
-function connection($name,$mdp,$admin){
+function connexion($name,$mdp,$admin){
   // ramene la connection
   global $bdd;
 
@@ -58,6 +58,7 @@ function connection($name,$mdp,$admin){
       $_SESSION['connexion']=true;
       $_SESSION['user']=$_POST['compte'];
       $_SESSION['admin']=$admin;
+      $_SESSION['ID']=$resultat['ID'];
       return "Connecté";
     }
     else {
@@ -75,7 +76,14 @@ function insert_new_compte($compte,$mdp){
     'compte'=> $compte,
     'mdp'=> $mdp
   ));
+  $req=$bdd->prepare('SELECT * FROM comptes WHERE compte=:name');
+  $req->execute(array(
+    'name'=>$compte
+  ));
+  $resultat = $req->fetch();
 
+  session_start();
+  $_SESSION['ID']=$resultat['ID'];
   $_SESSION['connexion']=true;
   $_SESSION['user']=$_POST['compte'];
 }
@@ -106,6 +114,21 @@ function insert_img($nom,$age,$pays,$don,$infos,$conseil,$file){
     'image'=> $imgBDD,
     'alt'=> '0'
   ));
+}
+
+// MODIF PROFILE
+function modif_profil($newName,$mdp,$id){
+  global $bdd;
+
+  $req=$bdd->prepare('UPDATE comptes SET compte=:newName ,mdp=:mdp WHERE ID=:ID');
+  $req->execute(array(
+    'newName'=> $newName,
+    'mdp' => $mdp,
+    'ID'=>$id
+  ));
+
+  $_SESSION['user']=$newName;
+
 }
 
  ?>

@@ -72,6 +72,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="deconnexion.php">Deconnexion</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="modif_profil.php">Modifier profil</a>
+              </li>
               <li>
                 <strong class="nav-link text-white">Bonjour <?php echo $_SESSION['user'] ?></strong>
               </li>

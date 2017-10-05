@@ -7,8 +7,8 @@
   // SECURITY TEST
   if (isset($_POST['compte']) AND isset($_POST['mdp'])) {
     if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['compte'])) {
-      $name =$_POST['compte'];
-      $mdp = $_POST['mdp'];
+      $name = htmlspecialchars($_POST['compte']);
+      $mdp = htmlspecialchars($_POST['mdp']);
     }
     else {
       header('Location:index.php');
@@ -24,7 +24,7 @@
     if ($name=='Admin') {
       $admin=true;
     }
-    connection($name,$mdp,$admin);
+    connexion($name,$mdp,$admin);
   }
 
   // CREER COMPTE
