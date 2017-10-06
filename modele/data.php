@@ -1,6 +1,7 @@
 <?php
 require_once("connexionSQL/connexionSQL.php");
 
+// LIST 8 ENFANTS
 function get_enfants(){
   global $bdd;
   $enfants=$bdd->query('SELECT *
@@ -9,6 +10,13 @@ function get_enfants(){
     ON enfant.id_enfant = img.id_img
     ORDER BY id_enfant DESC LIMIT 0,8');
 
+  return $enfants;
+}
+
+// LIST ENFANTS
+function get_allEnfants(){
+  global $bdd;
+  $enfants=$bdd->query('SELECT * FROM Listing_Enfants');
   return $enfants;
 }
 
@@ -24,6 +32,32 @@ function get_enfant(){
   return $enfant;
 }
 
+// MODIF ENFANT
+function modifChild($name,$age,$pays,$don,$infos,$conseil,$IdEnfantModif){
+  global $bdd;
+
+  $req=$bdd->prepare('UPDATE Listing_Enfants SET nom_enfant=:nom, age_enfant=:age, pays_enfant=:pays, don_enfant=:don, infos_supp=:infos, conseil=:conseil WHERE id_enfant=:ID');
+  $req->execute(array(
+    'nom'=> $name,
+    'age'=> $age,
+    'pays'=> $pays,
+    'don'=> $don,
+    'infos'=> $infos,
+    'conseil' => $conseil,
+    'ID'=>$IdEnfantModif
+  ));
+}
+
+
+// SUPR ENFANT
+function supChild($idEnfant){
+
+  global $bdd;
+  $supEnfant=$bdd->query('DELETE FROM Listing_Enfants WHERE id_enfant='.$idEnfant);
+
+  $supEnfant=$bdd->query('DELETE FROM Listing_Img_Enfant WHERE id_img='.$idEnfant);
+}
+
 function get_comptes(){
   global $bdd;
   $comptes=$bdd->query('SELECT * FROM comptes');
@@ -37,16 +71,12 @@ function connexion($name,$mdp,$admin){
   // ramene la connection
   global $bdd;
 
-  // ON FAIT UNE QUERY AVEC WHERE LE NAME RENTRE, PUIS ON MET LE MDP DE CETTE ENTRE DANS UNE VARIABLE , PUIS QUON FAIT UN PASSWORD_VERIFY AVEC LE MDP RENTRE ET LA VARIABLE , ON PEUT ARRIVER A QUELQUE CHOSE
-
   $req=$bdd->prepare('SELECT * FROM comptes WHERE compte=:name');
   $req->execute(array(
     'name'=>$name
   ));
   $resultat = $req->fetch();
 
-  // on met la ligne dans la variable resultat (si il y en a une);
-  // si resultat est vide (par ce qu'il na trouvé aucune entrée similaire dans le SELECT)
   if (!$resultat) {
     return "Nom erroné";
   }
@@ -116,7 +146,7 @@ function insert_img($nom,$age,$pays,$don,$infos,$conseil,$file){
   ));
 }
 
-// MODIF PROFILE
+// MODIF PROFIL
 function modif_profil($newName,$mdp,$id){
   global $bdd;
 
@@ -128,7 +158,15 @@ function modif_profil($newName,$mdp,$id){
   ));
 
   $_SESSION['user']=$newName;
-
 }
+
+// SUPR PROFIL
+function sup_profil($id){
+
+  global $bdd;
+
+  $supEnfant=$bdd->query('DELETE FROM comptes WHERE ID='.$id);
+}
+
 
  ?>
