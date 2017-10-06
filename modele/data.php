@@ -146,7 +146,7 @@ function insert_img($nom,$age,$pays,$don,$infos,$conseil,$file){
   ));
 }
 
-// MODIF PROFILE
+// MODIF PROFIL
 function modif_profil($newName,$mdp,$id){
   global $bdd;
 
@@ -158,10 +158,15 @@ function modif_profil($newName,$mdp,$id){
   ));
 
   $_SESSION['user']=$newName;
-
 }
 
+// SUPR PROFIL
+function sup_profil($id){
 
+  global $bdd;
+
+  $supEnfant=$bdd->query('DELETE FROM comptes WHERE ID='.$id);
+}
 
 
  ?>
